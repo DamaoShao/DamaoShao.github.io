@@ -10,5 +10,41 @@
 	<atom:link href="http://DamaoShao.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>content</title>
+      <link>http://DamaoShao.github.io/tags/content/</link>
+      <pubDate>Tue, 19 Feb 2019 23:45:57 +0800</pubDate>
+      
+      <guid>http://DamaoShao.github.io/tags/content/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>http://DamaoShao.github.io/tags/hugo/</link>
+      <pubDate>Tue, 19 Feb 2019 23:45:57 +0800</pubDate>
+      
+      <guid>http://DamaoShao.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>static site generator</title>
+      <link>http://DamaoShao.github.io/tags/static-site-generator/</link>
+      <pubDate>Tue, 19 Feb 2019 23:45:57 +0800</pubDate>
+      
+      <guid>http://DamaoShao.github.io/tags/static-site-generator/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>test_tags</title>
+      <link>http://DamaoShao.github.io/tags/test_tags/</link>
+      <pubDate>Tue, 19 Feb 2019 20:31:00 +0800</pubDate>
+      
+      <guid>http://DamaoShao.github.io/tags/test_tags/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

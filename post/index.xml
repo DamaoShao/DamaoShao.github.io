@@ -6,10 +6,19 @@
     <description>Recent content in Posts on DamaoShao - love life love coding</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 19 Feb 2019 20:31:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 19 Feb 2019 23:45:57 +0800</lastBuildDate>
     
 	<atom:link href="http://DamaoShao.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>My Second Post</title>
+      <link>http://DamaoShao.github.io/post/my-second-post/</link>
+      <pubDate>Tue, 19 Feb 2019 23:45:57 +0800</pubDate>
+      
+      <guid>http://DamaoShao.github.io/post/my-second-post/</guid>
+      <description>#this second post</description>
+    </item>
     
     <item>
       <title>My First Post</title>
