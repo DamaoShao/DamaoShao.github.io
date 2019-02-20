@@ -6,10 +6,19 @@
     <description>Recent content in Posts on DamaoShao - love life love coding</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 19 Feb 2019 23:45:57 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 20 Feb 2019 23:27:21 +0800</lastBuildDate>
     
 	<atom:link href="http://DamaoShao.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>阿里巴巴与四十大盗</title>
+      <link>http://DamaoShao.github.io/post/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E4%B8%8E%E5%9B%9B%E5%8D%81%E5%A4%A7%E7%9B%97/</link>
+      <pubDate>Wed, 20 Feb 2019 23:27:21 +0800</pubDate>
+      
+      <guid>http://DamaoShao.github.io/post/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E4%B8%8E%E5%9B%9B%E5%8D%81%E5%A4%A7%E7%9B%97/</guid>
+      <description>Hello World 1 2 def hello(world): return &amp;#34;你好&amp;#34;</description>
+    </item>
     
     <item>
       <title>My Second Post</title>

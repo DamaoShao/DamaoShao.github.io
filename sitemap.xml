@@ -3,6 +3,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://DamaoShao.github.io/post/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E4%B8%8E%E5%9B%9B%E5%8D%81%E5%A4%A7%E7%9B%97/</loc>
+    <lastmod>2019-02-20T23:27:21+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://DamaoShao.github.io/post/my-second-post/</loc>
     <lastmod>2019-02-19T23:45:57+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -24,14 +31,14 @@
   
   <url>
     <loc>http://DamaoShao.github.io/</loc>
-    <lastmod>2019-02-19T23:45:57+08:00</lastmod>
+    <lastmod>2019-02-20T23:27:21+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://DamaoShao.github.io/post/</loc>
-    <lastmod>2019-02-19T23:45:57+08:00</lastmod>
+    <lastmod>2019-02-20T23:27:21+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -87,6 +94,20 @@
   <url>
     <loc>http://DamaoShao.github.io/tags/test_tags/</loc>
     <lastmod>2019-02-19T20:31:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://DamaoShao.github.io/tags/%E6%B1%89%E5%AD%97/</loc>
+    <lastmod>2019-02-20T23:27:21+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://DamaoShao.github.io/tags/%E6%B5%8B%E8%AF%95/</loc>
+    <lastmod>2019-02-20T23:27:21+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>

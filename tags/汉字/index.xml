@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>汉字 on DamaoShao - love life love coding</title>
+    <link>http://DamaoShao.github.io/tags/%E6%B1%89%E5%AD%97/</link>
+    <description>Recent content in 汉字 on DamaoShao - love life love coding</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 20 Feb 2019 23:27:21 +0800</lastBuildDate>
+    
+	<atom:link href="http://DamaoShao.github.io/tags/%E6%B1%89%E5%AD%97/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>阿里巴巴与四十大盗</title>
+      <link>http://DamaoShao.github.io/post/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E4%B8%8E%E5%9B%9B%E5%8D%81%E5%A4%A7%E7%9B%97/</link>
+      <pubDate>Wed, 20 Feb 2019 23:27:21 +0800</pubDate>
+      
+      <guid>http://DamaoShao.github.io/post/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E4%B8%8E%E5%9B%9B%E5%8D%81%E5%A4%A7%E7%9B%97/</guid>
+      <description>Hello World 1 2 def hello(world): return &amp;#34;你好&amp;#34;</description>
+    </item>
+    
+  </channel>
+</rss>
