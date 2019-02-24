@@ -51,7 +51,7 @@
 
 <meta itemprop="datePublished" content="2019-02-24T11:23:42&#43;08:00" />
 <meta itemprop="dateModified" content="2019-02-24T11:23:42&#43;08:00" />
-<meta itemprop="wordCount" content="1030">
+<meta itemprop="wordCount" content="1033">
 
 
 
@@ -141,12 +141,10 @@
 <ul>
 <li>
 <ul>
-<li><a href="#绝对路径">绝对路径</a></li>
-<li><a href="#执行间隔的语法">执行间隔的语法</a></li>
-<li><a href="#其他注意事项">其他注意事项</a>
-<ul>
-<li><a href="#本篇小问题"><em>本篇小问题</em></a></li>
-</ul></li>
+<li><a href="#1-绝对路径">1. 绝对路径</a></li>
+<li><a href="#2-执行间隔的语法">2. 执行间隔的语法</a></li>
+<li><a href="#3-其他注意事项">3. 其他注意事项</a></li>
+<li><a href="#本篇小问题">本篇小问题</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -158,7 +156,7 @@
 
 <p>上周同事问了我一个crontab相关的问题，讨论完后，我想起来了这两年遇到的各种crontab的坑orz，搜了一下印象笔记，真是血泪史啊orz，往事不须再提了，整理一波坑吧，就当我新博客的第一篇。</p>
 
-<h3 id="绝对路径">绝对路径</h3>
+<h3 id="1-绝对路径">1. 绝对路径</h3>
 
 <p>crontab执行脚本的时候，其实是把脚本移动到用户的目录下面执行的，并不是在脚本本来的位置执行的。</p>
 
@@ -190,7 +188,7 @@
 
 <p><strong>事实上稳妥的办法是涉及到crontab的文件，所有路径都使用绝对路径。</strong></p>
 
-<h3 id="执行间隔的语法">执行间隔的语法</h3>
+<h3 id="2-执行间隔的语法">2. 执行间隔的语法</h3>
 
 <p>crontab的语法简单（这里就不赘述了），但也有点道道。</p>
 
@@ -244,7 +242,7 @@
 <span class="m">0</span> */1 * * *  <span class="c1">#每小时0分钟执行一次，跟上一句的区别就是，老的不执行完新的不会执行</span></code></pre></td></tr></table>
 </div>
 </div>
-<h3 id="其他注意事项">其他注意事项</h3>
+<h3 id="3-其他注意事项">3. 其他注意事项</h3>
 
 <ol>
 <li>crontab有系统级任务和用户级任务，有些操作（比如重启机器）放到用户级是没有用的orz，只有放到系统级任务（放入<code>/etc/crontab</code>）才有用。</li>
@@ -252,7 +250,7 @@
 <li>crontab的log在<code>/var/log/cron</code>里面，多看log，能解决90%的问题orz。</li>
 </ol>
 
-<h4 id="本篇小问题"><em>本篇小问题</em></h4>
+<h3 id="本篇小问题">本篇小问题</h3>
 
 <p>是的，我准备每一篇都设计一个小问题orz</p>
 
