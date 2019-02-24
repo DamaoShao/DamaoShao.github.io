@@ -6,61 +6,44 @@
     <description>Recent content in Tags on DamaoShao - love life love coding</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <lastBuildDate>Sun, 24 Feb 2019 11:23:42 +0800</lastBuildDate>
     
 	<atom:link href="http://DamaoShao.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>content</title>
-      <link>http://DamaoShao.github.io/tags/content/</link>
-      <pubDate>Tue, 19 Feb 2019 23:45:57 +0800</pubDate>
+      <title>Bash</title>
+      <link>http://DamaoShao.github.io/tags/bash/</link>
+      <pubDate>Sun, 24 Feb 2019 11:23:42 +0800</pubDate>
       
-      <guid>http://DamaoShao.github.io/tags/content/</guid>
+      <guid>http://DamaoShao.github.io/tags/bash/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>hugo</title>
-      <link>http://DamaoShao.github.io/tags/hugo/</link>
-      <pubDate>Tue, 19 Feb 2019 23:45:57 +0800</pubDate>
+      <title>Crontab</title>
+      <link>http://DamaoShao.github.io/tags/crontab/</link>
+      <pubDate>Sun, 24 Feb 2019 11:23:42 +0800</pubDate>
       
-      <guid>http://DamaoShao.github.io/tags/hugo/</guid>
+      <guid>http://DamaoShao.github.io/tags/crontab/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>static site generator</title>
-      <link>http://DamaoShao.github.io/tags/static-site-generator/</link>
-      <pubDate>Tue, 19 Feb 2019 23:45:57 +0800</pubDate>
+      <title>Linux</title>
+      <link>http://DamaoShao.github.io/tags/linux/</link>
+      <pubDate>Sun, 24 Feb 2019 11:23:42 +0800</pubDate>
       
-      <guid>http://DamaoShao.github.io/tags/static-site-generator/</guid>
+      <guid>http://DamaoShao.github.io/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>test_tags</title>
-      <link>http://DamaoShao.github.io/tags/test_tags/</link>
-      <pubDate>Tue, 19 Feb 2019 20:31:00 +0800</pubDate>
+      <title>Shell</title>
+      <link>http://DamaoShao.github.io/tags/shell/</link>
+      <pubDate>Sun, 24 Feb 2019 11:23:42 +0800</pubDate>
       
-      <guid>http://DamaoShao.github.io/tags/test_tags/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>汉字</title>
-      <link>http://DamaoShao.github.io/tags/%E6%B1%89%E5%AD%97/</link>
-      <pubDate>Wed, 20 Feb 2019 23:27:21 +0800</pubDate>
-      
-      <guid>http://DamaoShao.github.io/tags/%E6%B1%89%E5%AD%97/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>测试</title>
-      <link>http://DamaoShao.github.io/tags/%E6%B5%8B%E8%AF%95/</link>
-      <pubDate>Wed, 20 Feb 2019 23:27:21 +0800</pubDate>
-      
-      <guid>http://DamaoShao.github.io/tags/%E6%B5%8B%E8%AF%95/</guid>
+      <guid>http://DamaoShao.github.io/tags/shell/</guid>
       <description></description>
     </item>
     
