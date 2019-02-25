@@ -6,9 +6,73 @@
     <description>Recent content in Tags on DamaoShao - love life love coding</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <lastBuildDate>Sun, 24 Feb 2019 11:23:42 +0800</lastBuildDate>
     
 	<atom:link href="http://DamaoShao.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bash</title>
+      <link>http://DamaoShao.github.io/tags/bash/</link>
+      <pubDate>Sun, 24 Feb 2019 11:23:42 +0800</pubDate>
+      
+      <guid>http://DamaoShao.github.io/tags/bash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Code</title>
+      <link>http://DamaoShao.github.io/tags/code/</link>
+      <pubDate>Mon, 25 Feb 2019 20:56:49 +0800</pubDate>
+      
+      <guid>http://DamaoShao.github.io/tags/code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Crontab</title>
+      <link>http://DamaoShao.github.io/tags/crontab/</link>
+      <pubDate>Sun, 24 Feb 2019 11:23:42 +0800</pubDate>
+      
+      <guid>http://DamaoShao.github.io/tags/crontab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Crypto</title>
+      <link>http://DamaoShao.github.io/tags/crypto/</link>
+      <pubDate>Mon, 25 Feb 2019 20:56:49 +0800</pubDate>
+      
+      <guid>http://DamaoShao.github.io/tags/crypto/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>http://DamaoShao.github.io/tags/linux/</link>
+      <pubDate>Sun, 24 Feb 2019 11:23:42 +0800</pubDate>
+      
+      <guid>http://DamaoShao.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>http://DamaoShao.github.io/tags/python/</link>
+      <pubDate>Mon, 25 Feb 2019 20:56:49 +0800</pubDate>
+      
+      <guid>http://DamaoShao.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shell</title>
+      <link>http://DamaoShao.github.io/tags/shell/</link>
+      <pubDate>Sun, 24 Feb 2019 11:23:42 +0800</pubDate>
+      
+      <guid>http://DamaoShao.github.io/tags/shell/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

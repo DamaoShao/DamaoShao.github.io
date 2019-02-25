@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>由Crypto库的坑到Python编码问题 - DamaoShao - love life love coding</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="DamaoShao" /><meta name="description" content="最近维护之前实习小哥哥的代码，小哥哥代码写的好，但是都是Python3的，目前公司大多数代码还是Python2，因此维护过程中，就难免遇到移" /><meta name="keywords" content="Life, Coding, Study" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.54.0 with even 4.0.0" />
+
+
+<link rel="canonical" href="http://DamaoShao.github.io/post/%E7%94%B1crypto%E5%BA%93%E7%9A%84%E5%9D%91%E5%88%B0python%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="由Crypto库的坑到Python编码问题" />
+<meta property="og:description" content="最近维护之前实习小哥哥的代码，小哥哥代码写的好，但是都是Python3的，目前公司大多数代码还是Python2，因此维护过程中，就难免遇到移" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://DamaoShao.github.io/post/%E7%94%B1crypto%E5%BA%93%E7%9A%84%E5%9D%91%E5%88%B0python%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/" />
+<meta property="article:published_time" content="2019-02-25T20:56:49&#43;08:00"/>
+<meta property="article:modified_time" content="2019-02-25T20:56:49&#43;08:00"/>
+
+<meta itemprop="name" content="由Crypto库的坑到Python编码问题">
+<meta itemprop="description" content="最近维护之前实习小哥哥的代码，小哥哥代码写的好，但是都是Python3的，目前公司大多数代码还是Python2，因此维护过程中，就难免遇到移">
+
+
+<meta itemprop="datePublished" content="2019-02-25T20:56:49&#43;08:00" />
+<meta itemprop="dateModified" content="2019-02-25T20:56:49&#43;08:00" />
+<meta itemprop="wordCount" content="1450">
+
+
+
+<meta itemprop="keywords" content="Code,Python,Crypto," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="由Crypto库的坑到Python编码问题"/>
+<meta name="twitter:description" content="最近维护之前实习小哥哥的代码，小哥哥代码写的好，但是都是Python3的，目前公司大多数代码还是Python2，因此维护过程中，就难免遇到移"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">DamaoShao</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">DamaoShao</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">由Crypto库的坑到Python编码问题</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-02-25 </span>
+        <div class="post-category">
+            <a href="/categories/develop/"> Develop </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#crypto库的坑">Crypto库的坑</a></li>
+<li><a href="#python编码问题">Python编码问题</a></li>
+<li><a href="#本篇小问题">本篇小问题</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<p>最近维护之前实习小哥哥的代码，小哥哥代码写的好，但是都是Python3的，目前公司大多数代码还是Python2，因此维护过程中，就难免遇到移植的问题。</p>
+
+<h2 id="crypto库的坑">Crypto库的坑</h2>
+
+<p>将Python2中下面的代码移植到Python3中就出现了各种问题，我就按照报错的顺序捋一捋。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">Crypto.Cipher</span> <span class="kn">import</span> <span class="n">AES</span>
+
+<span class="k">def</span> <span class="nf">decrypt_password</span><span class="p">(</span><span class="n">password</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">password</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">None</span>
+    <span class="n">unpad</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="nb">ord</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])]</span>
+    <span class="c1"># AES_KEY is str</span>
+    <span class="n">cipher</span> <span class="o">=</span> <span class="n">AES</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">AES_KEY</span><span class="p">)</span>
+    <span class="n">decrypted</span> <span class="o">=</span> <span class="n">unpad</span><span class="p">(</span><span class="n">cipher</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">password</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;hex&#39;</span><span class="p">)))</span>
+
+    <span class="k">return</span> <span class="n">decrypted</span></code></pre></td></tr></table>
+</div>
+</div>
+<ol>
+<li>问题一</li>
+</ol>
+
+<blockquote>
+<p>报错：ModuleNotFoundError: No module named ’Crypto
+解决办法：安装pycryptodome库</p>
+</blockquote>
+
+<p>Crypto库在python3中可以安装，但是不可用，python3中对应的库名为pycryptodome，而且此库与Crypto库冲突，即在python3中如果两个库都安装了，那么一个库不能用。 这一点官方文档上面是有说明。</p>
+
+<ol>
+<li>问题二</li>
+</ol>
+
+<blockquote>
+<p>报错: new() missing 1 required positional argument: &lsquo;mode&rsquo;
+解决办法：指定具体的模式</p>
+</blockquote>
+
+<p>pycryptodome中mode哪怕使用默认值，也必须要填，Python2中该项默认值为AES.MODE_ECB，如果在Python2代码中mode没有指定，直接指定成AES.MODE_ECB即可。</p>
+
+<ol>
+<li>问题三</li>
+</ol>
+
+<blockquote>
+<p>报错：Object type <class 'str'> cannot be passed to C code
+解决办法：将代码中AES_KEY转为bytes格式。</p>
+</blockquote>
+
+<p>pycryptodome库还是和Python2一样，默认bytes类型，而且这个库不接受Unicode类型，而Python3默认就是Unicode，因此需要把key转为bytes类型。又因为使用了bytes类型，所以在进行字符串操作前，还要转换回来。</p>
+
+<p>因此，上述Python2代码在Python3中应该为</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">Crypto.Cipher</span> <span class="kn">import</span> <span class="n">AES</span>
+
+<span class="k">def</span> <span class="nf">decrypt_password</span><span class="p">(</span><span class="n">password</span><span class="p">):</span>
+    <span class="n">bytes2str</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+    <span class="n">unpad</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="nb">ord</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])]</span>
+    <span class="c1"># AES_KEY is bytes</span>
+    <span class="n">cipher</span> <span class="o">=</span> <span class="n">AES</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">AES_KEY</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">AES</span><span class="o">.</span><span class="n">MODE_ECB</span><span class="p">)</span>
+    <span class="n">decrypted</span> <span class="o">=</span> <span class="n">unpad</span><span class="p">(</span><span class="n">bytes2str</span><span class="p">(</span><span class="n">cipher</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="nb">bytes</span><span class="o">.</span><span class="n">fromhex</span><span class="p">(</span><span class="n">password</span><span class="p">))))</span>
+    <span class="k">return</span> <span class="n">decrypted</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="python编码问题">Python编码问题</h2>
+
+<p>上节问题三说到底就是编码问题，我是被编码坑了好多次orz，关于Python编码问题的文章，网上有好多，这里就不再赘述了。只是总结一下我对Python编码的理解：</p>
+
+<p>字符串天然有两种状态，文本和字节（二进制）。编码就是文本转字节，解码就是字节转文本。Python2和Python3的不同就在于，编码过程中的文本，内部表示方法是不同的（难的地方就在这）。</p>
+
+<p>在Python2中，Unicode是编码前的文本字符，str是编码后的字节序列，但凡被括号引起来的字符，都是str，而在Python3中str是编码过的Unicode文本字符，bytes是编码前的字节序列，被括号引起来的字符，其实已经是Unicode类型的str了，而这个str是什么样的编码，取决于文件头的声明和文件保存方式。</p>
+
+<p>Python中编码这么坑，有没有一种统一的解决办法呢？有的，就是<code>Unicode Everywhere</code>原因。</p>
+
+<blockquote>
+<p>在输入的时候，不管输入是什么格式，decode转化为Unicode，保证整个代码都是Unicode一种编码格式，涉及输出的时候，在统一encode需要的需要的编码。</p>
+</blockquote>
+
+<p>看了上面的原则，屏幕前的你可以会问了，那我咋知道输入是啥编码格式呢，是的，之前我写爬虫的时候，也有这个困扰，不过后来发现了这个库（charted），这个问题就再也不是问题啦。</p>
+
+<blockquote>
+<p>安装：pip install charted
+文档： <a href="https://chardet.readthedocs.io/en/latest/index.html&gt;">https://chardet.readthedocs.io/en/latest/index.html&gt;</a></p>
+</blockquote>
+
+<p>使用起来非常爽，大体是这个样子：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">chardet</span>
+
+<span class="n">resp</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;http://baidu.com/&#39;</span><span class="p">)</span>
+<span class="n">chardet</span><span class="o">.</span><span class="n">detect</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+
+<span class="c1"># 输出</span>
+<span class="c1"># {&#39;encoding&#39;: &#39;ascii&#39;, &#39;confidence&#39;: 1.0, &#39;language&#39;: &#39;&#39;}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="本篇小问题">本篇小问题</h2>
+
+<p>先公布上期答案：</p>
+
+<blockquote>
+<p>每分钟执行一次。因为crontab时间隔间如果冲突了，会按照时间短来。</p>
+</blockquote>
+
+<p>本期小问题：</p>
+
+<p>a、b和c三个变量分别为以下三个值，请问，在Python2和Python3下，执行 <code>a+b</code> 和 <code>a+c</code> 是报错还是有结果，为什么？</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">a</span><span class="o">=</span><span class="s1">&#39;编码&#39;</span>
+<span class="n">b</span><span class="o">=</span><span class="sa">b</span><span class="s1">&#39;code&#39;</span>
+<span class="n">c</span><span class="o">=</span><span class="sa">u</span><span class="s1">&#39;code&#39;</span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">DamaoShao</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2019-02-25
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/code/">Code</a>
+          <a href="/tags/python/">Python</a>
+          <a href="/tags/crypto/">Crypto</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/%E4%BD%BF%E7%94%A8crontab%E7%A2%B0%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91/">
+            <span class="next-text nav-default">使用crontab碰到的一些坑</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:damaoshao@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/DamaoShao" class="iconfont icon-github" title="github"></a>
+  <a href="http://DamaoShao.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="division">Life Is Fantastic</span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">DamaoShao</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
