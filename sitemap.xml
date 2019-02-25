@@ -3,70 +3,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://DamaoShao.github.io/post/%E4%BD%BF%E7%94%A8crontab%E7%A2%B0%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91/</loc>
-    <lastmod>2019-02-24T11:23:42+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://DamaoShao.github.io/tags/bash/</loc>
-    <lastmod>2019-02-24T11:23:42+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://DamaoShao.github.io/categories/</loc>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://DamaoShao.github.io/tags/crontab/</loc>
-    <lastmod>2019-02-24T11:23:42+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://DamaoShao.github.io/</loc>
-    <lastmod>2019-02-24T11:23:42+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://DamaoShao.github.io/categories/develop/</loc>
-    <lastmod>2019-02-24T11:23:42+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://DamaoShao.github.io/tags/linux/</loc>
-    <lastmod>2019-02-24T11:23:42+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://DamaoShao.github.io/post/</loc>
-    <lastmod>2019-02-24T11:23:42+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://DamaoShao.github.io/tags/shell/</loc>
-    <lastmod>2019-02-24T11:23:42+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://DamaoShao.github.io/tags/</loc>
-    <lastmod>2019-02-24T11:23:42+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
