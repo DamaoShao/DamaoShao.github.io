@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cloudify on DamaoShao - love life love coding</title>
+    <link>http://DamaoShao.github.io/tags/cloudify/</link>
+    <description>Recent content in Cloudify on DamaoShao - love life love coding</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 27 Feb 2019 20:52:49 +0800</lastBuildDate>
+    
+	<atom:link href="http://DamaoShao.github.io/tags/cloudify/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>手动安装cloudify Agent流程</title>
+      <link>http://DamaoShao.github.io/post/%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85cloudify-agent%E6%B5%81%E7%A8%8B/</link>
+      <pubDate>Wed, 27 Feb 2019 20:52:49 +0800</pubDate>
+      
+      <guid>http://DamaoShao.github.io/post/%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85cloudify-agent%E6%B5%81%E7%A8%8B/</guid>
+      <description>写在前面 Cloudify是一个混合云编排工具，用的人很少（毕竟大多数人都没有相关需求），Cloudify-agent用的人就更少了orz 我很</description>
+    </item>
+    
+  </channel>
+</rss>

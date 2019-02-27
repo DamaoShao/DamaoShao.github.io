@@ -3,6 +3,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://DamaoShao.github.io/post/%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85cloudify-agent%E6%B5%81%E7%A8%8B/</loc>
+    <lastmod>2019-02-27T20:52:49+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://DamaoShao.github.io/post/%E7%94%B1crypto%E5%BA%93%E7%9A%84%E5%9D%91%E5%88%B0python%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/</loc>
     <lastmod>2019-02-25T20:56:49+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -30,6 +37,13 @@
   </url>
   
   <url>
+    <loc>http://DamaoShao.github.io/tags/cloudify/</loc>
+    <lastmod>2019-02-27T20:52:49+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://DamaoShao.github.io/tags/code/</loc>
     <lastmod>2019-02-25T20:56:49+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -52,14 +66,14 @@
   
   <url>
     <loc>http://DamaoShao.github.io/</loc>
-    <lastmod>2019-02-25T20:56:49+08:00</lastmod>
+    <lastmod>2019-02-27T20:52:49+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://DamaoShao.github.io/categories/develop/</loc>
-    <lastmod>2019-02-25T20:56:49+08:00</lastmod>
+    <lastmod>2019-02-27T20:52:49+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -73,7 +87,7 @@
   
   <url>
     <loc>http://DamaoShao.github.io/post/</loc>
-    <lastmod>2019-02-25T20:56:49+08:00</lastmod>
+    <lastmod>2019-02-27T20:52:49+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
