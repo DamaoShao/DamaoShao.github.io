@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>SCVMM的自动化实践 - DamaoShao - love life love coding</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="DamaoShao" /><meta name="description" content="最近公司新签了一个客户，他们有在用Hyper-V，所以需要我们平台接入SCVMM，纳管他们的Hyper-V机器，开始我以为这事类似接入Ope" /><meta name="keywords" content="Life, Coding, Study" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.54.0 with even 4.0.0" />
+
+
+<link rel="canonical" href="http://DamaoShao.github.io/post/scvmm%E7%9A%84%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AE%9E%E8%B7%B5/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="SCVMM的自动化实践" />
+<meta property="og:description" content="最近公司新签了一个客户，他们有在用Hyper-V，所以需要我们平台接入SCVMM，纳管他们的Hyper-V机器，开始我以为这事类似接入Ope" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://DamaoShao.github.io/post/scvmm%E7%9A%84%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AE%9E%E8%B7%B5/" />
+<meta property="article:published_time" content="2019-03-21T20:46:40&#43;08:00"/>
+<meta property="article:modified_time" content="2019-03-21T20:46:40&#43;08:00"/>
+
+<meta itemprop="name" content="SCVMM的自动化实践">
+<meta itemprop="description" content="最近公司新签了一个客户，他们有在用Hyper-V，所以需要我们平台接入SCVMM，纳管他们的Hyper-V机器，开始我以为这事类似接入Ope">
+
+
+<meta itemprop="datePublished" content="2019-03-21T20:46:40&#43;08:00" />
+<meta itemprop="dateModified" content="2019-03-21T20:46:40&#43;08:00" />
+<meta itemprop="wordCount" content="2826">
+
+
+
+<meta itemprop="keywords" content="SCVMM,Hyper-V," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="SCVMM的自动化实践"/>
+<meta name="twitter:description" content="最近公司新签了一个客户，他们有在用Hyper-V，所以需要我们平台接入SCVMM，纳管他们的Hyper-V机器，开始我以为这事类似接入Ope"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">DamaoShao</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">DamaoShao</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">SCVMM的自动化实践</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-03-21 </span>
+        <div class="post-category">
+            <a href="/categories/develop/"> Develop </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#spf还是powershell">SPF还是Powershell</a></li>
+<li><a href="#自建agent还是使用winrm">自建Agent还是使用Winrm</a></li>
+<li><a href="#winrm的编码-字符集-问题">Winrm的编码(字符集)问题</a></li>
+<li><a href="#powershell的输出正则问题">Powershell的输出正则问题</a></li>
+<li><a href="#关于本篇小问题">关于本篇小问题</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<p>最近公司新签了一个客户，他们有在用Hyper-V，所以需要我们平台接入SCVMM，纳管他们的Hyper-V机器，开始我以为这事类似接入OpenStack、VSphere一样呢，结果一上手才发现，血炸orz，SCVMM居然没有自带API服务，更别提SDK了。但是客户需求大于天，只能一点点摸索，硬着头皮上，本篇blog就讲讲我目前碰到的坑。</p>
+
+<h2 id="spf还是powershell">SPF还是Powershell</h2>
+
+<p>SCVMM本身没有API服务，但是可以安装外挂API服务，这就是Service Provider Foundation（简称SPF）。SPF本质就是网络服务器，需要一些组件的支撑（SQLServer，.Net等）。操作SCVMM的另外一种方式Powershell。</p>
+
+<p>最后，我们选择使用Powershell，这绝不是因为Powershell好用，而且SPF本身的缺陷，逼着我们选了Powershell：</p>
+
+<ul>
+<li>SPF本质就是网络服务器，需要一些组件的支撑（SQLServer，.Net等），并且对组件版本有要求。在客户环境上安装这么多东西，客户可能会不同意，即使同意了，还有兼容性的问题，这就特别不符合产品化的原则。</li>
+<li>SPF并不是专门给SCVMM做API服务，同事调研发现，有些SCVMM操作SPF居然没有对应的API。</li>
+</ul>
+
+<h2 id="自建agent还是使用winrm">自建Agent还是使用Winrm</h2>
+
+<p>既然确定了使用Powershell，那么下面的问题就是如何远程执行Powershell命令。又是两条路，在客户机器上面搭Agent（HTTP服务），或者使用Winrm远程执行，经过比较，自搭HTTP服务的Agent（用Flask起的服务）比使用Winrm要快得多，平均一个命令自搭Agent要比Winrm能快出1到2秒。但是使用Agent有两个问题，一个是Agent要自己写，这是工作量，后期维护这又是工作量。另外一个是就是不安全，毕竟在客户环境上面开端口起服务，而且还是管理权限。因为自搭Agent这两个缺点，我们最后决定选用Winrm远程执行方案（即使它真的很慢orz）。</p>
+
+<h2 id="winrm的编码-字符集-问题">Winrm的编码(字符集)问题</h2>
+
+<p>跨平台总逃不出编码问题，这次是在Linux上面远程执行Windows的Powershell命令，编码就是头号拦路虎。</p>
+
+<p>首先是字符集。使用pywinrm库执行Powershell命令的输出中，如果有中文，就会显示成<code>?</code>。看了一圈源码，我发现，pywinrm库暴露出来的执行Powershell命令的<code>run_ps</code>方法默认使用的字符集是437，这是Windows中美国字符集编码（中国字符集编码是936），为了统一使用<code>utf-8</code>写代码，这里最好指定成<code>utf8</code>的字符集编码<code>65001</code>。字符集在<code>Protocol</code>类中的<code>open_shell</code>方法中可以指定。</p>
+
+<p>然后是编码问题。指定了<code>65001</code>的字符集后，一旦远程执行的命令有问题，标准错误中含有中文，代码就报无法编码的错误。报错位置在<code>session</code>类的<code>_clean_error_msg</code>中。上下文看一下，就很容易发现根本原因pywinrm解码方式是ascii码，对，你没有看错，9102年了，pywinrm居然还在用字符集<code>437</code>和ascii解码orz。没有办法，我只能重写了输出的方法，将将解码改成<code>ascii</code>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 为了编码过程中统一使用utf-8，重写下面两个方法，修改了字符集和解码方式。</span>
+<span class="c1"># set codepage to 65001(the powershell utf-8 charset code is 65001)</span>
+<span class="c1"># use utf-8 to decode</span>
+<span class="k">class</span> <span class="nc">SessionUTF8</span><span class="p">(</span><span class="n">Session</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">run_cmd</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">command</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">()):</span>
+        <span class="n">shell_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="o">.</span><span class="n">open_shell</span><span class="p">(</span><span class="n">codepage</span><span class="o">=</span><span class="mi">65001</span><span class="p">)</span>
+        <span class="n">command_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="o">.</span><span class="n">run_command</span><span class="p">(</span><span class="n">shell_id</span><span class="p">,</span> <span class="n">command</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span>
+        <span class="n">rs</span> <span class="o">=</span> <span class="n">Response</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="o">.</span><span class="n">get_command_output</span><span class="p">(</span><span class="n">shell_id</span><span class="p">,</span> <span class="n">command_id</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="o">.</span><span class="n">cleanup_command</span><span class="p">(</span><span class="n">shell_id</span><span class="p">,</span> <span class="n">command_id</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="o">.</span><span class="n">close_shell</span><span class="p">(</span><span class="n">shell_id</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">rs</span>
+
+    <span class="k">def</span> <span class="nf">run_ps</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">script</span><span class="p">):</span>
+        <span class="n">encoded_ps</span> <span class="o">=</span> <span class="n">b64encode</span><span class="p">(</span><span class="n">script</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf_16_le&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+        <span class="n">rs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">run_cmd</span><span class="p">(</span><span class="s1">&#39;powershell -encodedcommand {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">encoded_ps</span><span class="p">))</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">rs</span><span class="o">.</span><span class="n">std_err</span><span class="p">):</span>
+            <span class="n">rs</span><span class="o">.</span><span class="n">std_err</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_clean_error_msg</span><span class="p">(</span><span class="n">rs</span><span class="o">.</span><span class="n">std_err</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">rs</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="powershell的输出正则问题">Powershell的输出正则问题</h2>
+
+<p>SCVMM的Powershell输出就是一行行的<code>:</code>隔开的键值对，如果有多个对象，每个对象之间是空行隔开。最坑是，每行最多80字符，超过80字符就会换行。为了方便前端使用，我需要把这格式转成Json。血坑orz。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="c"># Powershell的输出格式</span><span class="w">
+</span><span class="w"></span>ServerConnection<span class="w">                  </span><span class="p">:</span><span class="w"> </span>Microsoft.SystemCenter.VirtualMachineManage<span class="w">
+</span><span class="w">                                    </span>r.Remoting.ServerConnection<span class="w">
+</span><span class="w"></span>ID<span class="w">                                </span><span class="p">:</span><span class="w"> </span>c755cbc0-d481-49db-b0a5-484c8f930767<span class="w">
+</span><span class="w"></span>MarkedForDeletion<span class="w">                 </span><span class="p">:</span><span class="w"> </span>False<span class="w">
+</span><span class="w"></span>ComputerTierTemplate<span class="w">              </span><span class="p">:</span><span class="w">
+</span><span class="w"></span>CapabilityProfile<span class="w">                 </span><span class="p">:</span><span class="w">
+</span><span class="w"></span>ApplicationProfile<span class="w">                </span><span class="p">:</span><span class="w">
+</span><span class="w"></span>SQLProfile<span class="w">                        </span><span class="p">:</span><span class="w">
+</span><span class="w"></span>ServerFeatures<span class="w">                    </span><span class="p">:</span><span class="w"> </span>{}<span class="w">
+</span><span class="w"></span>TotalVHDCapacity<span class="w">                  </span><span class="p">:</span><span class="w"> </span><span class="m">42949672960</span><span class="w">
+</span><span class="w"></span>VirtualizationPlatform<span class="w">            </span><span class="p">:</span><span class="w"> </span>HyperV<span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="c"># pywinrm的输出的字符串</span><span class="w">
+</span><span class="w"></span>ServerConnection<span class="w">                  </span><span class="p">:</span><span class="w"> </span>Microsoft.SystemCenter.VirtualMachineManage\r\n<span class="w">                                    </span>r.Remoting.ServerConnection\r\nID<span class="w">                                </span><span class="p">:</span><span class="w"> </span>afafac26-4b05-<span class="m">4458</span>-9eb8-529a589ec0cb\r\nMarkedForDeletion<span class="w">                 </span><span class="p">:</span><span class="w"> </span>False\r\nComputerTierTemplate<span class="w">              </span><span class="p">:</span><span class="w"> </span>\r\nCapabilityProfile<span class="w">                 </span><span class="p">:</span><span class="w"> </span>\r\nApplicationProfile<span class="w">                </span><span class="p">:</span><span class="w"> </span>\r\nSQLProfile<span class="w">                        </span><span class="p">:</span><span class="w"> </span>\r\nServerFeatures<span class="w">                    </span><span class="p">:</span><span class="w"> </span>{}\r\nTotalVHDCapacity<span class="w">                  </span><span class="p">:</span><span class="w"> </span><span class="m">42949672960</span>\r\nVirtualizationPlatform<span class="w">            </span><span class="p">:</span><span class="w"> </span>Hyper</code></pre></td></tr></table>
+</div>
+</div>
+<p>一开始我准备用正则解决这个问题的，但是作为一个正则菜鸡，实在想不出健壮的正则来解决换行问题。所以我首先想到的是，让输出不要换行。经过一番尝试，我发现在本地将Powershell的输出重定向到文本中，那么文件里面的输出是不换行的。但是这仅仅在于本地，一旦使用pywinrm执行，哪怕重定向到文本中也换行orz</p>
+
+<p>这条路走不通，我只能想办法把换行合并回去了。分析输出结构，我发现，每个对象间的分隔是<code>\r\n\r\n</code>，每行的分隔是<code>\r\n</code>，键和值的分隔是<code>:</code>，这直接用字符串操作就能解决啦，出现<code>\r\n</code>带着一大串空格的就是<code>值</code>换行，直接替换成<code>''</code>，等于就把换成合并回去了，然后在按对象（<code>\r\n\r\n</code>）分隔，每个对象按<code>:</code>分隔，就把键值对分解出来啦。仅仅需要两个列表推导，很舒服。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1">#powershell输出字符串转json</span>
+
+<span class="n">EMPTY_STRING</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="n">ONE_BLANK_SPACE</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span>
+<span class="n">KV_DEFAULT_INTERVAL</span> <span class="o">=</span> <span class="s1">&#39;: &#39;</span>
+<span class="n">NEWLINE</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\r\n</span><span class="s1">&#39;</span>
+<span class="n">KV_OFFSET</span> <span class="o">=</span> <span class="mi">2</span>
+
+
+<span class="k">def</span> <span class="nf">_preprocess_merge_newlines</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="s2">&#34;&#34;&#34;
+</span><span class="s2">    change string to list, merge the newlines
+</span><span class="s2">    text: str
+</span><span class="s2">    return: list
+</span><span class="s2">    &#34;&#34;&#34;</span>
+    <span class="n">components</span> <span class="o">=</span> <span class="p">[</span><span class="n">component</span> <span class="k">for</span> <span class="n">component</span> <span class="ow">in</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">NEWLINE</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span> <span class="k">if</span> <span class="n">component</span> <span class="o">!=</span> <span class="n">EMPTY_STRING</span><span class="p">]</span>
+    <span class="n">interval</span> <span class="o">=</span> <span class="n">NEWLINE</span> <span class="o">+</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">components</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">))</span> <span class="o">+</span> <span class="n">KV_OFFSET</span><span class="p">)</span> <span class="o">*</span> <span class="n">ONE_BLANK_SPACE</span>
+    <span class="k">return</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">component</span><span class="p">:</span> <span class="n">component</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">interval</span><span class="p">,</span> <span class="n">EMPTY_STRING</span><span class="p">),</span> <span class="n">components</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">_preprocess_regex</span><span class="p">(</span><span class="n">components</span><span class="p">):</span>
+    <span class="s2">&#34;&#34;&#34;
+</span><span class="s2">    change string to json in the list
+</span><span class="s2">    :param components: [string,string,string]
+</span><span class="s2">    :return: [json,json,json]
+</span><span class="s2">    &#34;&#34;&#34;</span>
+
+    <span class="k">return</span> <span class="p">[</span><span class="nb">dict</span><span class="p">([(</span><span class="n">key_value</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">KV_DEFAULT_INTERVAL</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span>
+                   <span class="n">key_value</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">KV_DEFAULT_INTERVAL</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+                  <span class="k">for</span> <span class="n">key_value</span> <span class="ow">in</span> <span class="n">component</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">NEWLINE</span><span class="p">)])</span> <span class="k">for</span> <span class="n">component</span> <span class="ow">in</span> <span class="n">components</span><span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">common_regex</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="s2">&#34;&#34;&#34;
+</span><span class="s2">    convert the output of powershell into json.
+</span><span class="s2">    :param text: str
+</span><span class="s2">    :return: [json,json,json] --&gt; every json is instance property set
+</span><span class="s2">    ----------------
+</span><span class="s2">    The function is suitable for:
+</span><span class="s2">    Get-SCVMTemplate/Get-SCVMHostCluster/Get-SCVMHost/Get-SCVirtualMachine/
+</span><span class="s2">    Get-SCVirtualHardDisk/Get-SCUserRole/Get-SCStorageDisk/Get-SCVMNetwork/
+</span><span class="s2">    Get-SCVMHostNetworkAdapter
+</span><span class="s2">    ----------------
+</span><span class="s2">    &#34;&#34;&#34;</span>
+    <span class="n">components</span> <span class="o">=</span> <span class="n">_preprocess_merge_newlines</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">_preprocess_regex</span><span class="p">(</span><span class="n">components</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="关于本篇小问题">关于本篇小问题</h2>
+
+<p>以后的博文会取消本篇小问题环节orz，至于上上篇的小问题，正好有同事问到我类似问题，我会专门写一篇博客详细讲一下（坑先挖好）。所以这里就不放答案啦。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">DamaoShao</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2019-03-21
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/scvmm/">SCVMM</a>
+          <a href="/tags/hyper-v/">Hyper-V</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85cloudify-agent%E6%B5%81%E7%A8%8B/">
+            <span class="next-text nav-default">手动安装cloudify Agent流程</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:damaoshao@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/DamaoShao" class="iconfont icon-github" title="github"></a>
+  <a href="http://DamaoShao.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="division">Life Is Fantastic</span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">DamaoShao</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
