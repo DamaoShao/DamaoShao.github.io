@@ -3,6 +3,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://DamaoShao.github.io/post/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8Bpowershell/</loc>
+    <lastmod>2019-04-02T20:33:34+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://DamaoShao.github.io/post/scvmm%E7%9A%84%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AE%9E%E8%B7%B5/</loc>
     <lastmod>2019-03-21T20:46:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -73,14 +80,14 @@
   
   <url>
     <loc>http://DamaoShao.github.io/</loc>
-    <lastmod>2019-03-21T20:46:40+08:00</lastmod>
+    <lastmod>2019-04-02T20:33:34+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://DamaoShao.github.io/categories/develop/</loc>
-    <lastmod>2019-03-21T20:46:40+08:00</lastmod>
+    <lastmod>2019-04-02T20:33:34+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -101,7 +108,14 @@
   
   <url>
     <loc>http://DamaoShao.github.io/post/</loc>
-    <lastmod>2019-03-21T20:46:40+08:00</lastmod>
+    <lastmod>2019-04-02T20:33:34+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://DamaoShao.github.io/tags/powershell/</loc>
+    <lastmod>2019-04-02T20:33:34+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>

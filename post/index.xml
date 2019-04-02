@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on DamaoShao - love life love coding</title>
+    <title>Posts on DamaoShao - Love Life Love Coding</title>
     <link>http://DamaoShao.github.io/post/</link>
-    <description>Recent content in Posts on DamaoShao - love life love coding</description>
+    <description>Recent content in Posts on DamaoShao - Love Life Love Coding</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 21 Mar 2019 20:46:40 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 02 Apr 2019 20:33:34 +0800</lastBuildDate>
     
 	<atom:link href="http://DamaoShao.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>快速上手Powershell</title>
+      <link>http://DamaoShao.github.io/post/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8Bpowershell/</link>
+      <pubDate>Tue, 02 Apr 2019 20:33:34 +0800</pubDate>
+      
+      <guid>http://DamaoShao.github.io/post/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8Bpowershell/</guid>
+      <description>本文大量例子都来自 Powershell中文博客，特别是其中的在线教程。 写这篇文章的目的主要是希望以后再需要写Powershell时，可以通过</description>
+    </item>
     
     <item>
       <title>SCVMM的自动化实践</title>
