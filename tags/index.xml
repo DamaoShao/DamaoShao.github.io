@@ -6,10 +6,19 @@
     <description>Recent content in Tags on DamaoShao - Love Life Love Coding</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 24 Feb 2019 11:23:42 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 08 Apr 2019 20:47:11 +0800</lastBuildDate>
     
 	<atom:link href="http://DamaoShao.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Agile Development</title>
+      <link>http://DamaoShao.github.io/tags/agile-development/</link>
+      <pubDate>Mon, 08 Apr 2019 20:47:11 +0800</pubDate>
+      
+      <guid>http://DamaoShao.github.io/tags/agile-development/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Bash</title>
@@ -98,6 +107,15 @@
       <pubDate>Thu, 21 Mar 2019 20:46:40 +0800</pubDate>
       
       <guid>http://DamaoShao.github.io/tags/scvmm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scrum</title>
+      <link>http://DamaoShao.github.io/tags/scrum/</link>
+      <pubDate>Mon, 08 Apr 2019 20:47:11 +0800</pubDate>
+      
+      <guid>http://DamaoShao.github.io/tags/scrum/</guid>
       <description></description>
     </item>
     

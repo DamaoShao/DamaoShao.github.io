@@ -3,6 +3,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://DamaoShao.github.io/post/%E8%B0%88%E4%B8%80%E4%B8%8B%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/</loc>
+    <lastmod>2019-04-08T20:47:11+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://DamaoShao.github.io/post/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8Bpowershell/</loc>
     <lastmod>2019-04-02T20:33:34+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -35,6 +42,13 @@
     <lastmod>2019-02-24T11:23:42+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://DamaoShao.github.io/tags/agile-development/</loc>
+    <lastmod>2019-04-08T20:47:11+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -80,7 +94,7 @@
   
   <url>
     <loc>http://DamaoShao.github.io/</loc>
-    <lastmod>2019-04-02T20:33:34+08:00</lastmod>
+    <lastmod>2019-04-08T20:47:11+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -107,8 +121,15 @@
   </url>
   
   <url>
+    <loc>http://DamaoShao.github.io/categories/management/</loc>
+    <lastmod>2019-04-08T20:47:11+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://DamaoShao.github.io/post/</loc>
-    <lastmod>2019-04-02T20:33:34+08:00</lastmod>
+    <lastmod>2019-04-08T20:47:11+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -135,6 +156,13 @@
   </url>
   
   <url>
+    <loc>http://DamaoShao.github.io/tags/scrum/</loc>
+    <lastmod>2019-04-08T20:47:11+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://DamaoShao.github.io/tags/shell/</loc>
     <lastmod>2019-02-24T11:23:42+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -143,7 +171,7 @@
   
   <url>
     <loc>http://DamaoShao.github.io/tags/</loc>
-    <lastmod>2019-02-24T11:23:42+08:00</lastmod>
+    <lastmod>2019-04-08T20:47:11+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>

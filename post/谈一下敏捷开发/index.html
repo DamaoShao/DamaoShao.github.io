@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>谈一下敏捷开发 - DamaoShao - Love Life Love Coding</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="DamaoShao" /><meta name="description" content="前言 1) 我们公司一直在实行敏捷开发，但是我身边的同事对敏捷开发的理解各不相同，差距大道让你怀疑那是不是一个东西orz，为了确认到底啥是敏捷开发" /><meta name="keywords" content="Life, Coding, Study" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.54.0 with even 4.0.0" />
+
+
+<link rel="canonical" href="http://DamaoShao.github.io/post/%E8%B0%88%E4%B8%80%E4%B8%8B%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="谈一下敏捷开发" />
+<meta property="og:description" content="前言 1) 我们公司一直在实行敏捷开发，但是我身边的同事对敏捷开发的理解各不相同，差距大道让你怀疑那是不是一个东西orz，为了确认到底啥是敏捷开发" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://DamaoShao.github.io/post/%E8%B0%88%E4%B8%80%E4%B8%8B%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/" />
+<meta property="article:published_time" content="2019-04-08T20:47:11&#43;08:00"/>
+<meta property="article:modified_time" content="2019-04-08T20:47:11&#43;08:00"/>
+
+<meta itemprop="name" content="谈一下敏捷开发">
+<meta itemprop="description" content="前言 1) 我们公司一直在实行敏捷开发，但是我身边的同事对敏捷开发的理解各不相同，差距大道让你怀疑那是不是一个东西orz，为了确认到底啥是敏捷开发">
+
+
+<meta itemprop="datePublished" content="2019-04-08T20:47:11&#43;08:00" />
+<meta itemprop="dateModified" content="2019-04-08T20:47:11&#43;08:00" />
+<meta itemprop="wordCount" content="3980">
+
+
+
+<meta itemprop="keywords" content="Scrum,Agile Development," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="谈一下敏捷开发"/>
+<meta name="twitter:description" content="前言 1) 我们公司一直在实行敏捷开发，但是我身边的同事对敏捷开发的理解各不相同，差距大道让你怀疑那是不是一个东西orz，为了确认到底啥是敏捷开发"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">DamaoShao</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">DamaoShao</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">谈一下敏捷开发</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-04-08 </span>
+        <div class="post-category">
+            <a href="/categories/management/"> Management </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#一-什么是敏捷开发">一、什么是敏捷开发</a>
+<ul>
+<li><a href="#1-1-敏捷开发的定义">1.1 敏捷开发的定义</a></li>
+<li><a href="#1-2-敏捷-scrum-开发的流程">1.2 敏捷（Scrum）开发的流程</a></li>
+</ul></li>
+<li><a href="#二-如何理解敏捷开发">二、如何理解敏捷开发</a>
+<ul>
+<li><a href="#2-1-敏捷开发的优势">2.1 敏捷开发的优势</a></li>
+<li><a href="#2-2-敏捷开发的劣势">2.2 敏捷开发的劣势</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<blockquote>
+<p><strong>前言</strong></p>
+
+<p>1) 我们公司一直在实行敏捷开发，但是我身边的同事对敏捷开发的理解各不相同，差距大道让你怀疑那是不是一个东西orz，为了确认到底啥是敏捷开发，这两天我看了一圈orz，写了这篇文章。</p>
+
+<p>2) 本文中的敏捷开发有时特指Scrum，文中可能没有全部标明。</p>
+
+<p>3) 本文的关于敏捷开发（Scrum）的描述部分（即【一、什么是敏捷开发】），除非特别注明，均来自<a href="https://www.scrum.org/">The Home of Scrum</a>中的<a href="https://www.scrum.org/resources/scrum-guide">The Scrum Guide</a>（中文PDF版<a href="https://www.scrumguides.org/docs/scrumguide/v2017/2017-Scrum-Guide-Chinese-Simplified.pdf">点击这里</a>）。为了行文方便，文中就不一一标注了。</p>
+</blockquote>
+
+<h2 id="一-什么是敏捷开发">一、什么是敏捷开发</h2>
+
+<h3 id="1-1-敏捷开发的定义">1.1 敏捷开发的定义</h3>
+
+<p>敏捷开发是一套软件开发中的观点（即《敏捷软件开发宣言》）和原则（即《敏捷宣言遵循的原则》）。符合该价值观的和原则的软件开发方法，都可以认为是敏捷开发。</p>
+
+<blockquote>
+<p><a href="https://agilemanifesto.org/iso/zhchs/manifesto.html"><strong>敏捷软件开发宣言</strong></a>
+我们一直在实践中探寻更好的软件开发方法，身体力行的同时也帮助他人。由此我们建立了如下价值观：
+个体和互动高于流程和工具，
+工作的软件高于详尽的文档，
+客户合作高于合同谈判，
+响应变化高于遵循计划，
+也就是说，尽管右项有其价值，我们更重视左项的价值。</p>
+
+<p><a href="http://agilemanifesto.org/iso/zhchs/principles.html"><strong>敏捷宣言遵循的原则</strong></a>
+我们遵循以下原则：
+我们最重要的目标，是通过持续不断地及早交付有价值的软件使客户满意。
+欣然面对需求变化，即使在开发后期也一样。为了客户的竞争优势，敏捷过程掌控变化。
+经常地交付可工作的软件，相隔几星期或一两个月，倾向于采取较短的周期。
+业务人员和开发人员必须相互合作，项目中的每一天都不例外。
+激发个体的斗志，以他们为核心搭建项目。提供所需的环境和支援，辅以信任，从而达成目标。
+不论团队内外，传递信息效果最好效率也最高的方式是面对面的交谈。
+可工作的软件是进度的首要度量标准。
+敏捷过程倡导可持续开发。责任人、开发人员和用户要能够共同维持其步调稳定延续。
+坚持不懈地追求技术卓越和良好设计，敏捷能力由此增强。
+以简洁为本，它是极力减少不必要工作量的艺术。
+最好的架构、需求和设计出自自组织团队。
+团队定期地反思如何能提高成效，并依此调整自身的举止表现。</p>
+</blockquote>
+
+<p>敏捷开发有5个主要的价值观和3个支柱，一般来说，敏捷开发也应该有这些特性。</p>
+
+<blockquote>
+<p><strong>敏捷开发的价值观</strong></p>
+
+<ul>
+<li>专注：由于我们在一段时间内只专注于少数几件事情，所以我们可以很好地合作并获得优质的产出。我们能够更快地交付有价值的事项。</li>
+<li>公开：在团队合作中，大家都会表达我们做得如何，以及遇到的障碍。我们发现将担忧说出来是一件好事，因为只有这样才能让这些担忧及时得到解决。</li>
+<li>尊重：因为我们在一起工作，分享和成功失败，这有助于培养并加深互相之间的尊重，并帮助彼此成为值得尊重的人。</li>
+<li>承诺：由于对自己的命运有更大的掌握，我们会有更坚强的信念获得成功。</li>
+<li>勇气：因为我们不得单打独斗，我们能够感受到支持，而且掌握更多的资源。这一切赋予我们勇气去迎接更大的挑战。</li>
+</ul>
+
+<p><strong>敏捷开发的支柱</strong></p>
+
+<ul>
+<li>透明：过程中的关键环节对于那些对产出负责的人必须是显而易见的。要拥有透明，就要为这些关键环节制定统一的标准，这样所有留意这些环节的人都会对观察到的事物有统一的理解。</li>
+<li>检视：Scrum 的使用者必须经常检视 Scrum 的工件和完成 Sprint 目标的进展，以便发现不必要的差异。检视不应该过于频繁而阻碍工作本身。当检视是由技能娴熟的检视者在工作中勤勉地执行时，效果最佳。</li>
+<li>适应：如果检视者发现过程中的一个或多个方面偏离可接受范围以外，并且将会导致产品不可接受时，就必须对过程或过程化的内容加以调整。调整工作必须尽快执行如此才能最小化进一步的偏离。</li>
+</ul>
+</blockquote>
+
+<h3 id="1-2-敏捷-scrum-开发的流程">1.2 敏捷（Scrum）开发的流程</h3>
+
+<p>Scrum是敏捷开发的框架中的一种，也是最流行的一种。Sprint是Scrum的组成部分，可以直接理解其为一次迭代，一个开发周期。Scrum开发过程有4个正式事件组成。</p>
+
+<blockquote>
+<ul>
+<li>Sprint计划会议：Sprint 中要做的工作在 Sprint 计划会议中来做计划。这份工作计划是由整个 Scrum 团队共同协作完成的。<strong>该会议主要解决两个问题：在这个Sprint做什么（What），怎么做（How）</strong>。</li>
+<li>每日Scrum站会：每日 Scrum 站会是开发团队的一个时间盒限定为 15 分钟的事件。每日 Scrum 站会Sprint 的每一天都举行。在每日 Scrum 站会上，开发团队为接下来的 24 小时的工作制定计划。通过检视上次每日Scrum 站会以来的工作和预测即将到来的 Sprint 工作来优化团队协作和效能。参与站会的每个人都要说<strong>“为了打成这个Sprint的目标，昨天我做了什么，今天我做了什么和是否有障碍在阻塞我或者我的团队的进度”</strong>这三个问题。</li>
+<li>Sprint评审会议：Sprint 评审会议在 Sprint 快结束时举行 ，用以检视所交付的产品增量并按需调整产品待办列表。在 Sprint 评审会议中，Scrum 团队和利益攸关者协同讨论在这次 Sprint 中所完成的工作。根据完成情况和 Sprint 期间产品待办列表的变化，所有参会人员协同讨论接下来可能要做的事情来优化价值。这是一个非正式会议，并不是一个进度汇报会议，演示增量的目的是为了获取反馈并促进合作。<strong>Sprint 评审会议的结果是一份修订后的产品待办列表，阐明很可能进入下个 Sprint 的产品待办列表项。产品待办列表也有可能为了迎接新的机会而进行全局性地调整。</strong></li>
+<li>Sprint回顾会议：Sprint 回顾会议是 Scrum 团队检视自身并创建下一个 Sprint 改进计划的机会。Sprint 回顾会议的目的在于三点，<strong>1）检视前一个 Sprint 中关于人、关系、过程和工具的情况如何。2）找出并加以排序做得好的和潜在需要改进的主要方面。3）制定改进 Scrum 团队工作方式的计划。</strong></li>
+</ul>
+</blockquote>
+
+<p>一般的Scrum开发流程（不借助于任何工具）<a href="http://www.lanceyan.com/chuangye/chuangye_agile_scrum.html">如下</a>：</p>
+
+<blockquote>
+<ol>
+<li>产品负责人将整个产品设计成产品Backlog。产品Backlog本质就是需求列表。</li>
+<li>召开Sprint计划会议。</li>
+<li>Sprint计划会议定下的任务写在纸条上贴在任务墙，让Scrum成员认领分配并细分。（任务墙就是把未完成、正在做、已完成 的工作状态贴到一个墙上，这样大家都可以看得到任务的状态 ）</li>
+<li>举行每日站立会议，让大家在每日会议上总结昨天做的事情、遇到什么困难，今天开展什么任务。</li>
+<li>绘制燃尽图，保证任务的概况能够清晰看到。（燃尽图把当前的任务总数和日期一起绘制，每天记录一下，可以看到每天还剩多少个任务，直到任务数为0 ，这个sprint就完成了）。</li>
+<li>Sprint评审会议是在Sprint完成时举行，要向客户演示自己完成的软件产品 。</li>
+<li>最后是Sprint总结会议，以轮流发言方式进行，每个人都要发言，总结上一次Sprint中遇到的问题、改进和大家分享讨论。</li>
+</ol>
+</blockquote>
+
+<h2 id="二-如何理解敏捷开发">二、如何理解敏捷开发</h2>
+
+<h3 id="2-1-敏捷开发的优势">2.1 敏捷开发的优势</h3>
+
+<p>敏捷开发(Scrum)只是一套积极响应变化的开发框架。如果开发效率被定义为更短时间里开发出需要的功能（或者相同的时间里开发出更多的功能），那么敏捷开发肯定会降低效率。想一想效率最高的开发方式是啥：需求明确，文档详尽，码不停蹄orz。而敏捷开发与&rdquo;效率最高&rdquo;的开发方式正好相反。</p>
+
+<ul>
+<li>敏捷开发讲究影响变化，因此需求特别不明确，甚至开发过程中，需求还有变更。</li>
+<li>需求变化就意味着返工，返工不仅浪费时间，更会浪费开发人员的感情，导致Scrum成员士气低迷。</li>
+<li>敏捷开发弱化了文档，很多时候，你有疑问，想找一下文档，会发现文档描述非常模糊，甚至根本就没有文档orz。</li>
+<li>敏捷开发强调（依赖）大量沟通，沟通就难免会打断手头的工作。</li>
+</ul>
+
+<p>既然敏捷开发会降低效率，那么为什么这么企业(包括咱们公司)还要使用敏捷开发呢？因为敏捷开发可以大幅提升<strong>投入产出比</strong>。高效率开发出来的功能，如果不是客户需要的，那就是纯浪费，效率再高，投入产出比也是零orz。具体来说，敏捷开发对投入产出比的提高来主要来自以下几个方面：</p>
+
+<ul>
+<li>Sprint周期短，Scrum人员少：毕竟&rdquo;人月神话&rdquo;orz，制定计划很难，制定靠谱的长期多人参与的计划更是难上青天。因此敏捷开发因为周期短人员少，制定出来的计划就有了天然的优势。</li>
+<li>不断集成，不断提供一个可展现的成果：<strong>没有人可能真的理解用户需要什么，哪怕用户自己也不行。</strong>优秀的敏捷开发应该（这里是应该，仅仅应该orz）从第一天开始就持续集成，这样更加方便检查，让用户确认，一旦开发偏离用户需求，就可以及时更正。</li>
+<li>集中资源，解决用户最迫切的需求：每次Sprint计划会议会对Backlog里面的每一项进优先级排序，在每个Sprint中，<strong>只开发用户最迫切的需求</strong>。这样就保证了本来就有限的资源不会浪费。</li>
+</ul>
+
+<h3 id="2-2-敏捷开发的劣势">2.2 敏捷开发的劣势</h3>
+
+<p>敏捷开发的劣势也是明显的，就是太依赖人了。</p>
+
+<ul>
+<li>没有文档，信息传递靠沟通。如果团队人员稳定还好，沟通有默契，很多基础信息也都了解，有些问题，提一句，听者立马懂了。如果团队人员流动大，这就太恐怖了orz，信息的高度不对等，沟通方式的不同步，这样沟通成本会成倍增加，新来的同事受挫感强，很难融入，老同事开发经常被打断，也烦。</li>
+<li>敏捷开发中，需求是会变更的。这个就要求团队成员的技术实力比较高，不仅懂自己这摊，还要懂其他人开发的内容，在开发的过程中，代码就要考虑到各方面问题，留有扩展性，这样在每次需求变更中，大家才能更快的找到最佳解决方案从而适配新的需求。另外，并不是每个Sprint每个人的Task都会非常均匀，Scrum成员最好能提其他伙伴分担一点，比如Task开发完成后，开发人员自己也可以跑测试案例的。</li>
+<li>敏捷开发的工作量很难有一个衡量标准。建立并执行的一个衡量标准的成本是极其高的orz，因此敏捷开发中的工作量认定更多是依靠Scrum成员的<strong>真诚</strong>。一旦失去<strong>真诚</strong>氛围，敏捷开发就只剩空壳，要知道没什么比每个人都要假装有事情干更恐怖的了。</li>
+</ul>
+
+<p>我觉得可以这么说，优秀的敏捷开发团队一定是由一群<strong>自建设</strong>的人<strong>自组织</strong>起来的。敏捷开发可以有Scrum Master（Scrum Master本质就是敏捷开发教练，指导大家更好的进行敏捷开发）（当然最好可以没有Scrum Master，因为每个都是Scrum Master），但是Scrum Master只能深度参与，决不能Push，一旦Push就会毁了自建设，这等于毁了敏捷开发的基石。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">DamaoShao</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2019-04-08
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/scrum/">Scrum</a>
+          <a href="/tags/agile-development/">Agile Development</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8Bpowershell/">
+            <span class="next-text nav-default">快速上手Powershell</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:damaoshao@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/DamaoShao" class="iconfont icon-github" title="github"></a>
+  <a href="http://DamaoShao.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="division">Life Is Fantastic</span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">DamaoShao</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
