@@ -7,11 +7,11 @@
             <webMaster>damaoshao@gmail.com (DamaoShao)</webMaster><lastBuildDate>Wed, 03 Nov 2021 22:54:35 &#43;0800</lastBuildDate>
             <atom:link href="https://damaoshao.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title>First_post</title>
-    <link>https://damaoshao.github.io/first_post/</link>
+    <title>SCVMM的远程接入实践</title>
+    <link>https://damaoshao.github.io/scvmm%E7%9A%84%E8%BF%9C%E7%A8%8B%E6%8E%A5%E5%85%A5%E5%AE%9E%E8%B7%B5/</link>
     <pubDate>Wed, 03 Nov 2021 22:54:35 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://damaoshao.github.io/first_post/</guid>
-    <description><![CDATA[hello world]]></description>
+    <guid>https://damaoshao.github.io/scvmm%E7%9A%84%E8%BF%9C%E7%A8%8B%E6%8E%A5%E5%85%A5%E5%AE%9E%E8%B7%B5/</guid>
+    <description><![CDATA[最近公司新签了一个客户，他们有在用Hyper-V，所以需要我们平台接入SCVMM，纳管他们的Hyper-V机器，开始我以为这事类似接入Ope]]></description>
 </item></channel>
 </rss>

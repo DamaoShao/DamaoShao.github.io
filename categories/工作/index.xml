@@ -1,10 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>所有文章 - 我的全新 Hugo 网站</title>
-        <link>https://damaoshao.github.io/posts/</link>
-        <description>所有文章 | 我的全新 Hugo 网站</description>
+        <title>工作 - 分类 - 我的全新 Hugo 网站</title>
+        <link>https://damaoshao.github.io/categories/%E5%B7%A5%E4%BD%9C/</link>
+        <description>工作 - 分类 - 我的全新 Hugo 网站</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>damaoshao@gmail.com (DamaoShao)</managingEditor>
-            <webMaster>damaoshao@gmail.com (DamaoShao)</webMaster><lastBuildDate>Wed, 03 Nov 2021 22:54:35 &#43;0800</lastBuildDate><atom:link href="https://damaoshao.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>damaoshao@gmail.com (DamaoShao)</webMaster><lastBuildDate>Wed, 03 Nov 2021 22:54:35 &#43;0800</lastBuildDate><atom:link href="https://damaoshao.github.io/categories/%E5%B7%A5%E4%BD%9C/" rel="self" type="application/rss+xml" /><item>
     <title>SCVMM的远程接入实践</title>
     <link>https://damaoshao.github.io/scvmm%E7%9A%84%E8%BF%9C%E7%A8%8B%E6%8E%A5%E5%85%A5%E5%AE%9E%E8%B7%B5/</link>
     <pubDate>Wed, 03 Nov 2021 22:54:35 &#43;0800</pubDate>
