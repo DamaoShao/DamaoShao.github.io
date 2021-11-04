@@ -1,2 +1,0 @@
-User-agent: *
-Sitemap: http://DamaoShao.github.io/sitemap.xml
